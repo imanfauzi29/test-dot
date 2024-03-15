@@ -1,0 +1,7 @@
+.primary {
+  @apply bg-primary text-white hover:bg-hover-primary;
+}
+
+.ghost {
+  @apply bg-transparent text-gray-900 hover:bg-gray-100;
+}

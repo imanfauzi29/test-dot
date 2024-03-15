@@ -4,6 +4,9 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
+  --bg-primary: 245 51 63;
+  --hover-primary: 207 40 50;
+  --text-secondary: 245 51 63;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
@@ -11,19 +14,17 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
+    --bg-primary: 245 51 63;
+    --hover-primary: 207 40 50;
+    --text-secondary: 245 51 63;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: #000;
+  background-color: white;
 }
 
 @layer utilities {
