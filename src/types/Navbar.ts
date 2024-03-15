@@ -3,3 +3,8 @@ export type NavigationType = {
     href: string
     children?: NavigationType[]
 }
+
+export type BreadcrumbType = {
+    name: string
+    href: string
+}

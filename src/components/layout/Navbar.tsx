@@ -3,7 +3,7 @@
 import { NavigationType } from "@/types/Navbar";
 import Image from "next/image";
 import { FaChevronDown } from "react-icons/fa";
-import Button from "../ui/Button";
+import Button from "../ui/button/Button";
 
 const Navbar = () => {
   const navigation: NavigationType[] = [
@@ -28,7 +28,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="flex justify-between py-6 px-14 w-full items-center">
+    <div className="flex justify-between py-6 w-full items-center">
       <Image
         src={"/logo.png"}
         width={0}
