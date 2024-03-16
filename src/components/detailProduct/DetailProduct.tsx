@@ -18,7 +18,7 @@ const DetailProduct = ({
       <div className="flex flex-col gap-6">
         <div className="space-y-2">
           <div className="flex items-center gap-4">
-            <h1 className="text-2xl font-bold">{data.title}</h1>
+            <h1 className="text-2xl md:text-3xl font-bold">{data.title}</h1>
             {data.house_type && (
               <div className="py-1 px-6 rounded-full bg-gray-100 text-gray-800">
                 {data.house_type}
@@ -32,9 +32,9 @@ const DetailProduct = ({
               width={0}
               height={0}
               sizes="100vw"
-              className="size-7 md:size-9"
+              className="size-7 xl:size-9"
             />
-            <span className="text-sm md:text-base">{data.user_account}</span>
+            <span className="text-sm lg:text-base">{data.user_account}</span>
           </div>
         </div>
 
@@ -59,7 +59,7 @@ const DetailProduct = ({
           </div>
         )}
 
-        <div className="flex justify-between py-3 border-t border-b gap-4">
+        <div className="flex justify-between py-3 border-t border-b gap-4 overflow-auto">
           {data.detail_product.map(({ icon, text, value }, i) => (
             <DetailIcon key={i} icon={icon} text={text} value={value} />
           ))}
@@ -67,7 +67,7 @@ const DetailProduct = ({
 
         <div className="flex flex-col gap-2">
           <span className="block">Harga Desain</span>
-          <h1 className="text-4xl font-semibold">
+          <h1 className="text-2xl lg:text-4xl font-semibold">
             {Intl.NumberFormat("id-ID", {
               style: "currency",
               currency: "IDR",

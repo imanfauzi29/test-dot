@@ -1,4 +1,3 @@
-"use client";
 import BankFooter from "@/components/bankFooter/BankFooter";
 import Breadcrumb from "@/components/breadcrumb/Breadcrumb";
 import Card, {
@@ -30,7 +29,7 @@ export default function Home() {
           <h1 className="text-2xl font-semibold text-gray-800">
             Tampilan Rumah
           </h1>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             {homeList.map(({ dimension, image, title }, i) => (
               <Card key={i}>
                 <CardImage
