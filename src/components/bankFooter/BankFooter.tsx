@@ -18,7 +18,7 @@ const BankFooter = ({ banks, title }: BankFooterProps) => {
             width={0}
             height={0}
             sizes="100vw"
-            className="h-10 w-full"
+            className="h-auto w-full"
           />
         ))}
       </div>

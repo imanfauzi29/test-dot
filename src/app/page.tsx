@@ -24,7 +24,7 @@ export default function Home() {
       <Breadcrumb />
       <Carousel images={slides} />
 
-      <section className="flex gap-8 px-14">
+      <section className="flex gap-8 px-6 md:px-14 flex-col md:flex-row">
         <div className="w-full">
           <h1 className="text-2xl font-semibold text-gray-800">
             Tampilan Rumah
@@ -64,7 +64,7 @@ export default function Home() {
       </section>
 
       {/* another design  */}
-      <section className="p-14 space-y-4">
+      <section className="p-6 md:p-14 space-y-4">
         <h2 className="text-2xl font-semibold">
           Desain Lainnya oleh Studio SAe
         </h2>
@@ -89,8 +89,8 @@ export default function Home() {
       </section>
 
       {/* footer  */}
-      <footer className="px-14 py-8 bg-[#012846] text-white gap-8 flex flex-col">
-        <div className="flex justify-between">
+      <footer className="px-8 md:px-14 py-8 bg-[#012846] text-white gap-8 flex flex-col">
+        <div className="flex justify-between flex-col md:flex-row gap-8">
           <div className="flex flex-col gap-8 max-w-md">
             <Image
               src="/logo-white.png"
@@ -123,7 +123,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex gap-44">
+          <div className="flex flex-row gap-4 md:gap-44">
             <div className="space-y-4">
               <h4 className="text-xl font-medium">Produk & Layanan</h4>
               <ul className="space-y-3">
@@ -167,7 +167,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex justify-between gap-3">
+        <div className="flex flex-col md:flex-row md:justify-between gap-3">
           <BankFooter
             title="Kredit Bangun Rumah"
             banks={["/bank/mandiri.png", "/bank/btn.png", "/bank/bni.png"]}
@@ -197,7 +197,7 @@ export default function Home() {
         </div>
 
         {/* copyright */}
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col md:flex-row md:justify-between gap-8 items-center">
           <div className="flex gap-4 items-center justify-center">
             <span className="text-nowrap">Powered by:</span>
             <Image

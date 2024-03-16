@@ -61,13 +61,13 @@ const Carousel = ({
       </div>
       <button
         onClick={prevSlide}
-        className="absolute top-1/2 left-20 transform z-40 -translate-y-1/2 bg-white text-gray-800 p-4"
+        className="absolute top-1/2 left-10 md:left-20 transform z-40 -translate-y-1/2 bg-white text-gray-800 p-4"
       >
         <FaChevronLeft />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute top-1/2 right-20 transform z-40 -translate-y-1/2 bg-white text-gray-800 p-4"
+        className="absolute top-1/2 right-10 md:right-20 transform z-40 -translate-y-1/2 bg-white text-gray-800 p-4"
       >
         <FaChevronRight />
       </button>
