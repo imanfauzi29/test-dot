@@ -1,6 +1,6 @@
 "use client";
 
-import { BreadcrumbType } from "@/types/Navbar";
+import { BreadcrumbType } from "@/types/navbar.types";
 import { FaChevronRight } from "react-icons/fa6";
 
 const Breadcrumb = () => {

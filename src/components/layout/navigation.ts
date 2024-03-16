@@ -1,4 +1,4 @@
-import { NavigationType } from "@/types/Navbar";
+import { NavigationType } from "@/types/navbar.types";
 
 export const navigation: NavigationType[] = [
     {

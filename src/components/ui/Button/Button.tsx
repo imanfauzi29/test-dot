@@ -1,8 +1,10 @@
 import { cn } from "@/utils/cn";
 import style from "./button.module.css";
 
+export type Variant = "primary" | "secondary" | "ghost";
+
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "ghost";
+  variant?: Variant;
   text?: string;
 }
 

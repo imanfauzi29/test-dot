@@ -1,45 +1,17 @@
 "use client";
 import Breadcrumb from "@/components/breadcrumb/Breadcrumb";
-import Card, { CardImage, CardTitle } from "@/components/card/Card";
+import Card, {
+  CardContent,
+  CardImage,
+  CardTitle,
+} from "@/components/card/Card";
 import Carousel from "@/components/carousel/Carousel";
+import DetailProduct from "@/components/detailProduct/DetailProduct";
 import Navbar from "@/components/layout/Navbar";
-import Image from "next/image";
-
-// carousel images
-const slides = [
-  "/carousel/image-1.jpg",
-  "/carousel/image-2.jpg",
-  "/carousel/image-3.jpg",
-];
-
-// home list image
-const homeList = [
-  {
-    title: "Kamar Tidur",
-    dimension: "4.0 x 3.4",
-    image: "/home-list/kamar-tidur.png",
-  },
-  {
-    title: "Ruang Keluarga",
-    dimension: "2.0 x 2.9",
-    image: "/home-list/ruang-keluarga.png",
-  },
-  {
-    title: "Ruang Kerja",
-    dimension: "2.0 x 2.9",
-    image: "/home-list/ruang-kerja.png",
-  },
-  {
-    title: "Ruang Makan & Dapur",
-    dimension: "3.0 x 2.9",
-    image: "/home-list/ruang-makan.png",
-  },
-  {
-    title: "Ruang Keluarga",
-    dimension: "2.0 x 2.9",
-    image: "/home-list/ruang-keluarga.png",
-  },
-];
+import Testimonial from "@/components/testimonial/Testimonial";
+import { slides } from "@/data/carousel";
+import { anotherDetailProductList, detailProduct } from "@/data/detail-product";
+import { homeList } from "@/data/home-list";
 
 export default function Home() {
   return (
@@ -49,7 +21,7 @@ export default function Home() {
       <Carousel images={slides} />
 
       <section className="flex gap-8 px-14">
-        <div className="flex-1 space-y-4">
+        <div className="w-full">
           <h1 className="text-2xl font-semibold text-gray-800">
             Tampilan Rumah
           </h1>
@@ -68,7 +40,48 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="min-w-96 w-full"></div>
+        <div>
+          <div className="flex flex-col gap-4 w-full">
+            <div className="rounded-2xl border p-6 w-full">
+              <DetailProduct data={detailProduct} />
+            </div>
+
+            {/* Testimonial  */}
+            <div className="w-full space-y-4">
+              <h2 className="text-2xl font-semibold">Testimoni</h2>
+              <div className="flex flex-col gap-4">
+                <Testimonial />
+                <Testimonial />
+                <Testimonial />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* another design  */}
+      <section className="p-14 space-y-4">
+        <h2 className="text-2xl font-semibold">
+          Desain Lainnya oleh Studio SAe
+        </h2>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
+          {anotherDetailProductList.map((item, i) => (
+            <Card key={i}>
+              <CardImage
+                src={item.image as string}
+                alt={item.title}
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="w-full"
+              />
+              <CardContent>
+                <DetailProduct data={item} btnVariant="secondary" />
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </section>
     </main>
   );

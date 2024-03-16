@@ -5,3 +5,7 @@
 .ghost {
   @apply bg-transparent text-gray-900 hover:bg-gray-100;
 }
+
+.secondary {
+  @apply bg-transparent text-secondary border border-secondary hover:bg-primary hover:text-white transition-all;
+}
