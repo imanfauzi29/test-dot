@@ -39,8 +39,8 @@ const Navbar = () => {
       />
 
       <ul className="flex items-center gap-8">
-        {navigation.map((item) => (
-          <li key={item.href} className="block">
+        {navigation.map((item, i) => (
+          <li key={i} className="block">
             <a
               href={item.href}
               className="py-2 flex items-center gap-2 font-semibold hover:text-secondary"
