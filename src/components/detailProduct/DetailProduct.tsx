@@ -1,6 +1,6 @@
 import Image from "next/image";
-import DetailIcon from "../ui/DetailIcon";
-import Button, { Variant } from "../ui/button/Button";
+import DetailIcon from "@/components/ui/DetailIcon";
+import Button, { Variant } from "@/components/ui/button/Button";
 import { FaCheckCircle } from "react-icons/fa";
 import { DetailProductList } from "@/types/detail-product.types";
 
