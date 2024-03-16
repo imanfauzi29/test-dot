@@ -39,7 +39,7 @@ const Carousel = ({
 
   return (
     <section className="relative w-full">
-      <div className="relative h-56 overflow-hidden rounded-lg md:h-[560px]">
+      <div className="relative h-56 overflow-hidden md:h-[560px]">
         <div
           className={cn("flex transition ease-out duration-500")}
           style={{

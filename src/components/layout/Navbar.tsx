@@ -5,7 +5,7 @@ import Button from "@/components/ui/button/Button";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between py-6 w-full items-center">
+    <div className="flex justify-between py-6 w-full px-14 items-center">
       <Image
         src={"/logo.png"}
         width={0}
