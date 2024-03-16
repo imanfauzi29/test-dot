@@ -3,6 +3,7 @@
 import { cn } from "@/utils/cn";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
 interface CarouselProps {
   images: string[];
@@ -33,10 +34,11 @@ const Carousel = ({
     if (!autoSlide) return;
     const slideInterval = setInterval(nextSlide, interval);
     return () => clearInterval(slideInterval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
-    <div className="relative w-full">
+    <section className="relative w-full">
       <div className="relative h-56 overflow-hidden rounded-lg md:h-[560px]">
         <div
           className={cn("flex transition ease-out duration-500")}
@@ -59,17 +61,17 @@ const Carousel = ({
       </div>
       <button
         onClick={prevSlide}
-        className="absolute top-1/2 left-0 transform z-40 -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-l"
+        className="absolute top-1/2 left-20 transform z-40 -translate-y-1/2 bg-white text-gray-800 p-4"
       >
-        Prev
+        <FaChevronLeft />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute top-1/2 right-0 transform z-40 -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-r"
+        className="absolute top-1/2 right-20 transform z-40 -translate-y-1/2 bg-white text-gray-800 p-4"
       >
-        Next
+        <FaChevronRight />
       </button>
-    </div>
+    </section>
   );
 };
 

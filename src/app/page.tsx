@@ -2,7 +2,6 @@
 import Breadcrumb from "@/components/breadcrumb/Breadcrumb";
 import Carousel from "@/components/carousel/Carousel";
 import Navbar from "@/components/layout/Navbar";
-import Image from "next/image";
 
 const slides = [
   "/carousel/image-1.jpg",
@@ -11,7 +10,7 @@ const slides = [
 ];
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col px-14">
+    <main className="flex min-h-screen flex-col px-14 gap-4">
       <Navbar />
       <Breadcrumb />
       <Carousel images={slides} />

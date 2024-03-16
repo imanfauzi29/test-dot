@@ -1,32 +1,9 @@
-"use client";
-
-import { NavigationType } from "@/types/Navbar";
 import Image from "next/image";
 import { FaChevronDown } from "react-icons/fa";
-import Button from "../ui/button/Button";
+import { navigation } from "./navigation";
+import Button from "@/components/ui/button/Button";
 
 const Navbar = () => {
-  const navigation: NavigationType[] = [
-    {
-      name: "Tentang Kami",
-      href: "#",
-      children: [
-        { name: "Visi & Misi", href: "/about" },
-        { name: "Sejarah", href: "/about" },
-      ],
-    },
-    {
-      name: "Product & Layanan",
-      href: "#",
-      children: [
-        { name: "Product", href: "/product" },
-        { name: "Layanan", href: "/service" },
-      ],
-    },
-    { name: "Blog", href: "#" },
-    { name: "FAQ", href: "#" },
-  ];
-
   return (
     <div className="flex justify-between py-6 w-full items-center">
       <Image
